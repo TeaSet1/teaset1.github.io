@@ -1,0 +1,340 @@
+* {
+    font-family: 'Montserrat';
+}
+
+body {
+    background: #E5E5EC;
+}
+
+.input-box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#input-text{
+
+    background: #E5E5EC;
+    resize: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    text-align: center;
+
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 150%;
+    color: #0A3871;
+}
+
+#input-text::placeholder{
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 150%;
+    color: #0A3871;
+}
+
+.action-box{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+}
+
+.instrucciones{
+    display: flex;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    gap: 8px;
+}
+
+.instrucciones p{
+
+    font-size: 14px;
+    color: #495057;
+    opacity: 0.8;
+}
+
+.botones{
+    display: flex;
+    gap: 24px;
+}
+
+.botones button, #b-copiar{
+
+    width: 100%;
+    height: 67px;
+    border-radius: 24px;
+}
+
+#b-encriptar{
+
+    background: #0A3871;
+    color: #FFFFFF;
+}
+
+#b-encriptar:hover{
+
+    cursor: pointer;
+    background-color: #1c5287;
+}
+
+#b-encriptar:active{
+
+    background-color: #052649;
+}
+
+#b-desencriptar{
+
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+}
+
+#b-desencriptar:hover{
+
+    cursor: pointer;
+    color: #1c5287;
+    border-color: #1c5287;
+    background-color: #e6e9f5;
+}
+
+#b-desencriptar:active{
+
+    color: #052649;
+    border-color: #052649;
+    background-color: #b3b7d0;
+}
+
+.output-box{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 40px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+#munheco{
+
+    display: none;
+    padding: 32px;
+}
+
+#output-text-box{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 32px;
+}
+
+.no-messages{
+
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #343A40;
+}
+
+#output-text-box p{
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #495057;
+}
+
+#output{
+    display: none; /*flex*/
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px;
+}
+
+#output-text{
+    text-align: left;
+    overflow: scroll;
+    scrollbar-width: none; /*para firefox*/
+    -ms-overflow-style: none; /*ie, edge*/
+}
+
+#output-text::-webkit-scrollbar{
+    display: none; /*chrome, opera, safari*/
+}
+
+#copied-message{
+    
+    display: none;
+    position: absolute;
+    /*transition: display 2s;
+    transition-timing-function: ease-out;*/
+    font-weight: 600;
+    font-size: 29px;
+    line-height: 19px;
+
+    animation: fadeOut 1.5s forwards;
+    -webkit-animation: fadeOut 1.5s forwards; /* chrome, opera, safari*/
+    -moz-animation: fadeOut 1.5s forwards; /*para firefox*/
+    -ms-animation: fadeOut 1.5s forwards; /*para ie*/         
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@-webkit-keyframes fadeOut{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@-moz-keyframes fadeOut{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@-moz-keyframes fadeOut{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+#b-copiar{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    border: 1px solid #0A3871;
+    background: #FFFFFF;
+    color: #0A3871;
+}
+
+#b-copiar:hover{
+
+    font-size: 17px;
+    cursor: pointer;
+    color: #1c5287;
+    border: 2px solid #1c5287;
+}
+
+#b-copiar:active{
+
+    color: #052649;
+    background-color: rgb(248,248,248);
+    border-color: #052649;
+}
+
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    header{
+        height: 96px;
+    }
+
+    .logo{
+        position: relative;
+        top: 25%;
+    }
+    
+    .input-box{
+        margin: 56px 0 40px 0;
+    }
+
+    #input-text{
+        height: 320px;
+    }
+
+    .botones{
+        flex-direction: column;
+    }
+
+    .action-box{
+        margin: 0 16px 0 16px;
+    }
+
+    .output-box{
+        margin: 24px 40px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+
+    header{
+        margin-top: 73.42px;
+        margin-left: 40px;
+    }
+
+    .input-box{
+        margin: 140px 40px 24px;
+    }
+    
+    #input-text{
+        height: 580px;
+    }
+
+}
+
+@media screen and (min-width: 1280px) {
+
+    body{
+        display: flex;
+    }
+
+    header{
+        margin-top: 2.78%;
+        margin-left: 2.78%;
+    }
+
+    main{
+        display: flex;
+        width: 100%;
+    }
+
+    .input-box{
+        min-width: 60%;
+        margin-left: 5.56%;
+        margin-top: calc(8.34% + 48px);
+        margin-bottom: 7%;
+        min-height: calc(100vh - 21%);
+    }
+
+    #input-text{
+        text-align: left;
+        min-height: 75%;
+    }
+
+    .output-box{
+        width: 100%;
+        min-height: calc(100vh - 80px);
+    }
+
+    #copied-message{
+        top: 15%;
+    }
+
+    #munheco{
+        display: block;
+        max-width: 85%;
+    }
+
+    #output{
+        height: 100%;
+        min-width: 73%;
+        justify-content: space-between;
+    }
+
+    #output-text{
+        min-height: 700px;
+    }
+
+    #b-copiar{
+        margin-bottom: 5%;
+    }
+}
